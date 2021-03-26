@@ -1,5 +1,5 @@
 options(repos=structure(c(CRAN="https://repo.miserver.it.umich.edu/cran/")))
-install.packages("devtools")
+install.packages(c("curl", "httr", "devtools", "credentials"))
 devtools::install_github("MitsuhaMiyamizu/BiocManager")
 options(BioC_mirror="https://mirrors.sjtug.sjtu.edu.cn/bioconductor")
 BiocManager::install("baySeq")
