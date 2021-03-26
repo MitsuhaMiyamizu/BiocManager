@@ -28,9 +28,9 @@ jobs:
           r-version: ${{ matrix.r-version }}
       - name: Install dependencies
         run: |
-          install.packages("devtools")
-          devtools::install_github("MitsuhaMiyamizu/BiocManager")
+          Rscript -e 'install.packages("devtools") \
+                      devtools::install_github("MitsuhaMiyamizu/BiocManager")'
       - name: Check
         run: |
-          options(BioC_mirror="https://mirrors.sjtug.sjtu.edu.cn/bioconductor")
-          BiocManager::install("baySeq")
+          Rscript -e 'options(BioC_mirror="https://mirrors.sjtug.sjtu.edu.cn/bioconductor") \
+                      BiocManager::install("baySeq")'
