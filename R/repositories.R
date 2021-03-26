@@ -101,7 +101,7 @@
         BioCworkflows = "workflows",
         BioCbooks = if (version() >= "3.12") "books" else NULL
     )
-    bioc_repos <- paste(mirror, "packages", version, paths, sep="/")
+    bioc_repos <- paste(mirror, version, paths, sep="/")
     setNames(bioc_repos, names(paths))
 }
 
