@@ -1,0 +1,5 @@
+options(repos=structure(c(CRAN="https://mirrors.sjtug.sjtu.edu.cn/cran/")))
+install.packages("devtools")
+devtools::install_github("MitsuhaMiyamizu/BiocManager")
+options(BioC_mirror="https://mirrors.sjtug.sjtu.edu.cn/bioconductor")
+BiocManager::install("baySeq")
