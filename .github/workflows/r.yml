@@ -19,7 +19,7 @@ jobs:
     runs-on: Ubuntu-latest
     strategy:
       matrix:
-        r-version: [3.6, 4.0]
+        r-version: [3.5, 3.6]
     steps:
       - uses: actions/checkout@v2
       - name: Set up R ${{ matrix.r-version }}
@@ -28,7 +28,7 @@ jobs:
           r-version: ${{ matrix.r-version }}
       - name: Install dependencies
         run: |
-          install.packages(c("devtools"))
+          install.packages("devtools")
           devtools::install_github("MitsuhaMiyamizu/BiocManager")
       - name: Check
         run: |
