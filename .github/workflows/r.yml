@@ -31,4 +31,8 @@ jobs:
             sudo apt update && sudo apt install libcurl4-openssl-dev
       - name: Check
         run: |
+          git clone https://github.com/MitsuhaMiyamizu/minqa.git
           Rscript test.R
+          Rscript ./minqa/tests/newuoa.R
+          Rscript ./minqa/tests/cyq-minqa.R
+          Rscript ./minqa/tests/rvaltest.R
