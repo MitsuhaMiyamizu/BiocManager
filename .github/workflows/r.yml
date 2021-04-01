@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: Ubuntu-18.04
+    runs-on: Ubuntu-20.04
     strategy:
       matrix:
         r-version: [3.5, 3.6]
